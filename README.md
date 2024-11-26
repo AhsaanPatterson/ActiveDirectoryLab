@@ -205,33 +205,123 @@ Click next, next and next until you receive the following screen and select DHCP
 Click next until you receive the install option 
 ext you want to exit out of the installer and go to tools => DHCP
 Expand your DC and right click on one of the IPv4 or IPv6 -> New Scope
-Click next and input the following name 
-
-
-
-
+Click next and input the following name 172.16.0.100.200
+Input the following information for the next screen
+Start IP 172.16.0.100 End IP 172.16.0.200 and Subnet Mask 255.255.0.0
+After you will hit next until you see the Configure DHCP options
+Next you want to enter the following IP address and make sure to select add before moving forward
+172.16.0.1
+Next you want to proceed through until you see the installation 
+You want to then right click on the DC and select Authorize
+After you want to right click on IPv4 and refresh
 <br/>
-<img src="https://imgur.com/Yqr6Uau.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/tqnCJcM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
-Step 19: Signout of the VM in order to login to newly created admin account
-  <br/>
-<img src="https://imgur.com/Yqr6Uau.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 23: Setup users via Powershell
+Go back to Server Manager and select “Configure this local server”
+Click on Internet Explorer Ehanced Security Configuration and turn it off
+Open Internet Explorer and copy the following link https://github.com/joshmadakor1/AD_PS…
+The link will automatically begin downloading the script files to create multiple users
+Save as the folder on your desktop and extract it 
+<br/>
+<img src="https://imgur.com/1JQ5WQP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/8yxTPci.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/e5I9D1Y.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Open the folder and names file
+After add your name to the top of the names file
+Open Windows Powershell ISE from the windows icon and run as admin
+Once inside of Powershell click on the folder icon to locate the folder downloaded with the create users script
+Once you see the script pulled up you want to type in the following command to allow scripts executable
+Set-ExecutionPolicy Unrestricted
+Select Yes to all after running script
+Next you want to enter the following command to change directories in order to run above script
+Cd C:\users\(AD name)\desktop\AD_PS-master
+At this point you can press the green play button and watch the users be created<br/>
+<img src="https://imgur.com/lBon7J5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/mjItyhP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/AbPKytc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/IgAsXRC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/BPKe4r7.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/cV7lwBr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
-Step 19: Signout of the VM in order to login to newly created admin account
-  <br/>
-<img src="https://imgur.com/Yqr6Uau.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 24: Confirm changes in Active Directory
+Next you want to go to the windows icon in the bottom left hand corner and select Windows Admin Tools -> Administrative Directory Users and Computers
+Next you want to refresh the DC (mydomain.com) and you should see the _USERS folder and all of the newly added users
+<br/>
+<img src="https://imgur.com/VMvoKXx.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
-Step 19: Signout of the VM in order to login to newly created admin account
-  <br/>
-<img src="https://imgur.com/Yqr6Uau.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 25: Create another new VM with Windows 10
+Minimize your current VM and open VirtualBox.
+Next you want to create a new Virtual Machine.
+With this Virtual Machine you want to name it Client1 and the type Windows and version Windows 10 (64-bit).
+Next you would want to set the hardware memory to 2096 MB if your computer allows that.
+Click next on the following screens until you see the VM created.
+Before starting right click on Client1 go to advanced settings and turn on these two options.
+Go to the processor and if your computer allows it change it to 4 CPU.
+After find your network tab and modify the NAT to internal then press ok.
+<br/>
+<img src="https://imgur.com/rkAxWLu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/jZuJcs9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="(https://imgur.com/eq0Z65Y.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/lfa06LN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/5iPtnBC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/hrgaQ7i.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
-Step 19: Signout of the VM in order to login to newly created admin account
-  <br/>
-<img src="https://imgur.com/Yqr6Uau.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Step 26: Next you want to double click on Client1 and locate the Windows10 ISO file downloaded earlier.
+Wait a little time for the installation is completed and press next until you receive.
+You want to select the option you do not have an license key.
+Select the option Windows 10 Pro.
+Next you want to select the custom option for installation type and press next to install.
+Installation may take some time to complete after a while you will receive the following screen.
+Select your keyboard layout.
+Next option you would select “I dont have internet”.
+You want to choose “Continue with limited setup”.
+Type user as your account name.
+You can unselect each option to help speed up time.
+You can select not now option for Cortana.
+<br/>
+<img src="https://imgur.com/L6PvezF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/xIX95xB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/30J9dZt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/n6FKGbO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/EvNIb7x.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/j5akPcB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/gHYiIOG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Step 27: Make sure Internet is connected
+Open the command prompt by searching cmd.
+Then enter the following command to pull up the ip addresses.
+Ipconfig
+If you do not see an Default Gateway be defined we must investigate from the Domain Controller.
+Log back into your first VM.
+Open DHCP
+<br/>
+<img src="https://imgur.com/QLEHUpJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Expand out the domain controller 
+Expand out IPv4 and double click on Server options
+After doing that you want to select more actions on the right hand plan
+The selection you want to choose is “Routing” and add the following IP address below 172.16.0.1
+<br/>
+<img src="https://imgur.com/0PB7KMe.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Step 24: Confirm changes in Active Directory
+Next you want to go to the windows icon in the bottom left hand corner and select Windows Admin Tools -> Administrative Directory Users and Computers
+Next you want to refresh the DC (mydomain.com) and you should see the _USERS folder and all of the newly added users
+<br/>
+<img src="https://imgur.com/VMvoKXx.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>  
+
+
+
+
 
 
 </p>
