@@ -96,12 +96,49 @@ Step 11: Click on the Reboot later option then manually shut down VM
 
 
 
+SStep 12: Log back into Virtual Machine and Prepare to configure IP address
+First, click on the network icon in the lower right hand corner
+Select the change adapter options 
+Next select the first option right click on status then on details
+You want to point out the IP address 
+If the IP address start with 10 then that is the correct 1st NAT option
+Now change the name of the 1st NAT to something like “Internet”
+Rename the 2nd NAT to something like “Internal”
+
+ <br/>
+<img src="https://imgur.com/GEezSPK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Step 13. We will rename the PC and restart the PC after this
+ <br/>
+<img src="https://imgur.com/Xzam2Km.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
 
 
+Step 14. Configure IP address for NAT #2
+Go to Network icon in bottom left hand corner
+Click on change adapter options
+Click on the Internal and press properties 
+Input the following address and select ok and ok after.
+IP address 172.16.0.1
+Subnet Masking 255.255.255.0
+Preferred DNS Server 127.0.0.1
+ <br/>
+<img src="https://imgur.com/fHNfoDI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
+
+Step 11: Click on the Reboot later option then manually shut down VM
+ <br/>
+<img src="https://imgur.com/5J8BK2f.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+
+
+Step 11: Click on the Reboot later option then manually shut down VM
+ <br/>
+<img src="https://imgur.com/5J8BK2f.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
 
