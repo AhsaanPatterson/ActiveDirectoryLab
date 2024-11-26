@@ -129,25 +129,109 @@ Preferred DNS Server 127.0.0.1
 
 
 
-Step 11: Click on the Reboot later option then manually shut down VM
+Step 15: Create an Domain
+Search Server Manager
+Click on “Add roles and manager”
+Click on next and next once you reach this screen pause
+Once you select your DC click next
+After you would select “Active Directory Domain Services”
+You will next, next, and then select Install
+Once the installation have completed close out this screen
+<br/>
+<img src="https://imgur.com/C6oWpGb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+
+
+Step 16: Click on the notification at the upper right hand corner to begin “Post deployment Configuration”
+Select “ Add a new forest” and input the name mydomain.com
+Input a generic password on the next screen
+Click on Next when you receive the Install option and select it
+Once the installation is completed the VM will automatically restart
  <br/>
-<img src="https://imgur.com/5J8BK2f.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/jaTInQP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Step 17: Once logging back in go to the windows home icon and find underneath Windows Admin Tools  for “Active Directory Users and Computers”
+Once inside of the Active Directory Users and Computers” you want to right click on mydomain.com -> New -> Organizational Unit
+Create _Admins organizational group and uncheck option
+Next you will right click on _Admins folder and select New -> User
+You want to choose your name and standard naming convention for username
+Select an generic password
+
+  <br/>
+<img src="https://imgur.com/vZduLOW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
 
 
-Step 11: Click on the Reboot later option then manually shut down VM
- <br/>
-<img src="https://imgur.com/5J8BK2f.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 18: Right click on your user account and select properties
+Click on Members Of and select add
+You want to type in domain admins and press check names
+Then you want to apply and press ok
+  <br/>
+
+
+
+Step 19: Signout of the VM in order to login to newly created admin account
+  <br/>
+<img src="https://imgur.com/Yqr6Uau.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
 
 
+Step 20: Create RAS/NAT
+Search Server Manager and select “Add roles and features”
+Select next and then next, after that you want to add Remote Access
+Click next again two more times you should be able to select the feature Routing
+Click on next until you get the option to Install
+<br/>
+<img src="https://imgur.com/R2Ha3aG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Step 21: Close out of the installation and select Tools -> Routing and Remote Access
+Right click on your DC and select Configure and Enable Routing and Remote Access
+Select next then you want to choose the option “NAT”
+You want to select the Internet option and finish the installation
+If no Network Interfaces appear you may want to close out and repeat step 21 a
+After the installation is complete you should see this screen
+<br/>
+<img src="https://imgur.com/5UngmMf.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Step 22: Setup DHCP server
+Go back into Server Manager and select “Add roles and features”
+Click next, next and next until you receive the following screen and select DHCP
+Click next until you receive the install option 
+ext you want to exit out of the installer and go to tools => DHCP
+Expand your DC and right click on one of the IPv4 or IPv6 -> New Scope
+Click next and input the following name 
 
 
 
 
+<br/>
+<img src="https://imgur.com/Yqr6Uau.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
+
+Step 19: Signout of the VM in order to login to newly created admin account
+  <br/>
+<img src="https://imgur.com/Yqr6Uau.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Step 19: Signout of the VM in order to login to newly created admin account
+  <br/>
+<img src="https://imgur.com/Yqr6Uau.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Step 19: Signout of the VM in order to login to newly created admin account
+  <br/>
+<img src="https://imgur.com/Yqr6Uau.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Step 19: Signout of the VM in order to login to newly created admin account
+  <br/>
+<img src="https://imgur.com/Yqr6Uau.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
 </p>
