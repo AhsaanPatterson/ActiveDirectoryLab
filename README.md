@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-In this project you will be presented a walk through how to create an Active Directory home lab Envirnoment using Oracle Virtual Box. Configuring and running this lab have helped developed my understanding of how active directory and windows networking works. 
+In this project you will be presented a walk through how to create an Active Directory home lab environment using Oracle Virtual Box. Configuring and running this lab have helped developed my understanding of how active directory and windows networking works. 
 <br />
 
 
