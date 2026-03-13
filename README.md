@@ -21,7 +21,7 @@ Step 1: Download Virtual Box
 On the left hand side select your preferred OS and download VirtualBox Platform Packages  https://www.virtualbox.org/wiki/Downloads
 After installing Virtual Box you need to download the Extension Pack on the right hand side.
  <br/>
-<img src="https://imgur.com/RsVaMeP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/xLg8xFf" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Step 2: Download Windows 10 64 bit
